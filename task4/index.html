@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Быки и коровы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Быки и коровы</h1>
+    <p class="hint">Компьютер загадал число из 4 разных цифр. Попробуйте угадать!</p>
+
+    <form id="guess-form" class="guess-form" autocomplete="off">
+      <input type="text" id="guess-input" maxlength="4" inputmode="numeric" placeholder="4 разные цифры">
+      <button type="submit" id="check-btn">Проверить</button>
+    </form>
+    <p id="message" class="message"></p>
+
+    <p id="attempts" class="attempts">Попыток: 0</p>
+
+    <ul id="history" class="history"></ul>
+
+    <button type="button" id="new-game-btn" class="new-game">Новая игра</button>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
