@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="game">
+<h1>Simon</h1>
+<div class="info">
+<span id="level">Уровень: 0</span>
+<span id="status">Нажмите «Старт»</span>
+</div>
+<div class="board" id="board">
+<button class="pad pad-0" data-index="0" aria-label="Зелёный" disabled></button>
+<button class="pad pad-1" data-index="1" aria-label="Красный" disabled></button>
+<button class="pad pad-2" data-index="2" aria-label="Жёлтый" disabled></button>
+<button class="pad pad-3" data-index="3" aria-label="Синий" disabled></button>
+</div>
+<button class="start" id="start">Старт</button>
+<p class="result" id="result"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

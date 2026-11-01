@@ -1,0 +1,117 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #1b1f2a;
+color: #e8ecf4;
+font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.game {
+width: min(92vw, 420px);
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 18px;
+padding: 24px 0;
+}
+
+h1 {
+margin: 0;
+font-size: 2.4rem;
+letter-spacing: 0.04em;
+}
+
+.info {
+width: 100%;
+display: flex;
+justify-content: space-between;
+gap: 12px;
+font-size: 1.05rem;
+}
+
+.board {
+width: 100%;
+aspect-ratio: 1;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 10px;
+padding: 10px;
+background: #0f121a;
+border-radius: 50%;
+}
+
+.pad {
+border: none;
+cursor: pointer;
+filter: brightness(0.55);
+transition: filter 0.08s, box-shadow 0.08s;
+}
+
+.pad:disabled {
+cursor: not-allowed;
+}
+
+.pad:not(:disabled):hover {
+filter: brightness(0.75);
+}
+
+.pad.active {
+filter: brightness(1.25);
+box-shadow: 0 0 28px 6px rgba(255, 255, 255, 0.35);
+}
+
+.pad-0 {
+background: #2fbf71;
+border-radius: 100% 0 0 0;
+}
+
+.pad-1 {
+background: #e5484d;
+border-radius: 0 100% 0 0;
+}
+
+.pad-2 {
+background: #f5c542;
+border-radius: 0 0 0 100%;
+}
+
+.pad-3 {
+background: #3e7bfa;
+border-radius: 0 0 100% 0;
+}
+
+.start {
+padding: 12px 40px;
+font-size: 1.1rem;
+font-family: inherit;
+color: #1b1f2a;
+background: #e8ecf4;
+border: none;
+border-radius: 999px;
+cursor: pointer;
+}
+
+.start:hover {
+background: #ffffff;
+}
+
+.start:focus-visible,
+.pad:focus-visible {
+outline: 3px solid #ffffff;
+outline-offset: 3px;
+}
+
+.result {
+min-height: 1.5em;
+margin: 0;
+font-size: 1.2rem;
+text-align: center;
+}
